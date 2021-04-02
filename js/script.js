@@ -170,7 +170,7 @@ function startTimer(time){
     function timer(){
         timeCount.textContent = time; //changing the value of timeCount with time value
         time--; //decrement the time value
-        if(time < 9){ //if timer is less than 9
+        if(time < 30){ //if timer is less than 9
             let addZero = timeCount.textContent; 
             timeCount.textContent = "0" + addZero; //add a 0 before time value
         }
@@ -179,23 +179,44 @@ function startTimer(time){
             timeText.textContent = "Time Off"; //change the time text to time off
             const allOptions = option_list.children.length; //getting all option items
             let correcAns = questions[que_count].answer; //getting correct answer from array
-            for(i=0; i < allOptions; i++){
+            /*for(i=0; i < allOptions; i++){
                 if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer
                     option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
                     option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
                     console.log("Time Off: Auto selected correct answer.");
                 }
-            }
+            }*/
             for(i=0; i < allOptions; i++){
                 option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
             }
+
+            
+
             next_btn.classList.add("show"); //show the next button if user selected any option
         }
+        if (time === 0) {
+            if(que_count < questions.length - 1){ //if question count is less than total question length
+                que_count++; //increment the que_count value
+                que_numb++; //increment the que_numb value
+                showQuetions(que_count); //calling showQestions function
+                queCounter(que_numb); //passing que_numb value to queCounter
+                clearInterval(counter); //clear counter
+                clearInterval(counterLine); //clear counterLine
+                startTimer(timeValue); //calling startTimer function
+                startTimerLine(widthValue); //calling startTimerLine function
+                timeText.textContent = "Time Left"; //change the timeText to Time Left
+                next_btn.classList.remove("show"); //hide the next button
+            }else{
+                clearInterval(counter); //clear counter
+                clearInterval(counterLine); //clear counterLine
+                showResult(); //calling showResult function
+            }
+        } 
     }
 }
 
 function startTimerLine(time){
-    counterLine = setInterval(timer, 120);
+    counterLine = setInterval(timer, 110);
     function timer(){
         time += 1; //upgrading time value with 1
         time_line.style.width = time + "px"; //increasing width of time_line with px by time value
@@ -210,3 +231,5 @@ function queCounter(index){
     let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
+
+

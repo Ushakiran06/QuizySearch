@@ -37,3 +37,27 @@ let questions = [
   //   ]
   // },
 ];
+
+questionDivId =  document.getElementById('questions');
+
+setInterval(function () {
+    counter--;
+
+    if (counter >= 0) {
+        id = document.getElementById('count');
+        id.innerHTML = counter;
+    }
+    if (counter === 0) {
+        id.innerHTML = 'Times Up!';
+        counter = 10;
+        questionsCount++;
+    } 
+    
+    //To check if all questions are completed or not
+    if (questionsCount === questions.length){
+        questionDivId.innerHTML = "Well Played! Game is over";
+        id.innerHTML = "";
+    } else{
+        questionDivId.innerHTML = questions[questionsCount];
+    }   
+}, 1000);
