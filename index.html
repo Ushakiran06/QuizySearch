@@ -42,6 +42,27 @@
   width: 150px;
   border-radius: 50%;
 }
+
+.flex-container {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+        }
+        
+        .flex-container > div {
+          background-color: #f1f1f1;
+          width: 400px;
+          margin: 10px;
+          line-height: 20px;
+          font-size: 10px;
+        }
+        .flex-container2{
+            background-color: #745d5d;
+        }
+        #down {
+  margin-top: 100%;
+  padding-bottom: 25%;
+        }
     </style>
 </head>
 <body>
@@ -98,7 +119,7 @@
     <!-- Result Box -->
     <div class="result_box">
         <div class="icon">
-            <i class="fas fa-crown"></i>
+            <i class="fas fa-crown" style="size: 20px;"></i>
         </div>
         <div class="complete_text">You've completed the Quiz!</div>
         <div class="score_text">
@@ -107,8 +128,16 @@
         <div class="buttons">
             <button class="restart">Replay Quiz</button>
             <button class="quit">Quit Quiz</button>
-            <button id = "solveButton">Release answers!</button>
+
+            <br>
         </div>
+        <div class="buttons">
+        <button id = "solveButton" class="word">Word Search Answers</button>
+        <button class="quiz">
+            <a href="end.html" target="_blank" > Quiz Answer</a>
+        </button>
+    </div>
+        
     </div>
 
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
@@ -121,11 +150,12 @@
     </div>  
     <div class="split right">
         <div class="centered">
-            <!--<h2 id = "instructions"></h2>-->
+            <h2 id = "instructions"></h2>
             <!--<h3 id = "themeIntro">The theme is: <span id = "wordTheme"></span></h3>-->
-            
-            <button id = "newGameButton" type = "button">New Game</button>
+            <div class="centered">
+            <button id = "newGameButton" type = "button" style="text-align: center;">New Game</button>
             <div id = "wordboard"></div>
+        </div>
             <!--<div id = "wordlist"></div>-->
     
     

@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family:  "Moon", Arial, sans serif;
 }
 
 body{
@@ -26,6 +26,25 @@ body{
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.ans_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    width: 550px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
 .info_box.activeInfo,
@@ -373,11 +392,26 @@ footer button.show{
 }
 
 .buttons button.quit{
-    color: #007bff;
-    background: #fff;
+    color: #fff;
+    background: #007bff;
 }
 
 .buttons button.quit:hover{
+    background: #0263ca;
+}
+
+.buttons button.word{
     color: #fff;
     background: #007bff;
+}
+
+.buttons button.quiz{
+    color: #fff;
+    background: #007bff;
+}
+.buttons button.word:hover{
+    background: #0263ca;
+}
+.buttons button.quiz:hover{
+    background: #0263ca;
 }

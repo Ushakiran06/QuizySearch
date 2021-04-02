@@ -14,7 +14,7 @@ h1, h2, #wordTheme, #solveButton, #newGameButton, .listWord {
 
 h1, h2, #wordTheme, #solveButton, #newGameButton {
 
-	border: 2px black solid;
+	border: 1px solid #007bff;
 	border-radius: 8px;
 
 } 

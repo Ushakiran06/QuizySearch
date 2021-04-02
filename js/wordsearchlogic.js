@@ -13,7 +13,7 @@ function WordSearchLogic(gameId,list) {
 	var board = {
 
 		matrix: [], //empty array where the matrix will go
-		size: 20 //width + height of the matrix
+		size: 15 //width + height of the matrix
 
 	};
 
@@ -110,6 +110,7 @@ function WordSearchLogic(gameId,list) {
 			}
 
 		}
+
 
 	}
 
@@ -210,6 +211,7 @@ function WordSearchLogic(gameId,list) {
 
 		//sets whether word is fitted or not to true
 		thisWord.wordFitted = true;
+
 
 	}
 
