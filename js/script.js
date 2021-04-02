@@ -26,11 +26,11 @@ continue_btn.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
     showQuetions(0); //calling showQestions function
     queCounter(1); //passing 1 parameter to queCounter
-    startTimer(60); //calling startTimer function
+    startTimer(10); //calling startTimer function
     startTimerLine(0); //calling startTimerLine function
 }
 
-let timeValue =  60;
+let timeValue = 10;
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
@@ -45,7 +45,7 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
     result_box.classList.remove("activeResult"); //hide result box
-    timeValue = 60; 
+    timeValue = 10; 
     que_count = 0;
     que_numb = 1;
     userScore = 0;
@@ -85,7 +85,6 @@ next_btn.onclick = ()=>{
         clearInterval(counter); //clear counter
         clearInterval(counterLine); //clear counterLine
         showResult(); //calling showResult function
-
     }
 }
 
@@ -115,8 +114,8 @@ let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 //if user clicked on option
 function optionSelected(answer){
-    clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
+    //clearInterval(counter); //clear counter
+    //clearInterval(counterLine); //clear counterLine
     let userAns = answer.textContent; //getting user selected option
     let correcAns = questions[que_count].answer; //getting correct answer from array
     const allOptions = option_list.children.length; //getting all option items
@@ -171,7 +170,7 @@ function startTimer(time){
     function timer(){
         timeCount.textContent = time; //changing the value of timeCount with time value
         time--; //decrement the time value
-        if(time < 9){ //if timer is less than 9
+        if(time < 30){ //if timer is less than 9
             let addZero = timeCount.textContent; 
             timeCount.textContent = "0" + addZero; //add a 0 before time value
         }
@@ -180,13 +179,13 @@ function startTimer(time){
             timeText.textContent = "Time Off"; //change the time text to time off
             const allOptions = option_list.children.length; //getting all option items
             let correcAns = questions[que_count].answer; //getting correct answer from array
-            for(i=0; i < allOptions; i++){
+            /*for(i=0; i < allOptions; i++){
                 if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer
                     option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
                     option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
                     console.log("Time Off: Auto selected correct answer.");
                 }
-            }
+            }*/
             for(i=0; i < allOptions; i++){
                 option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
             }
