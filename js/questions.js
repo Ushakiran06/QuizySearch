@@ -2,19 +2,8 @@
 
 // creating an array and passing the number, questions, options, and answers
 let questions = [
-    {
+     {
     numb: 1,
-    question: "Caesar Cipher uses C =(p+k) mod 26 to encrypt, where k=7. Use Caesar’s Cipher to decipher the following:AYVQHU OVYZL",
-    answer: "TROJAN HORSE",
-    options: [
-      "TROJAN HORSE",
-      "BRUTE FORCE",
-      "BRUTE HORSE",
-      "TROJAN FORCE"
-    ]
-  },
-    {
-    numb: 2,
     question: "A technology that hides information inside a picture, and follows the concept of security through obscurity is __?",
     answer: "Steganography",
     options: [
@@ -25,7 +14,7 @@ let questions = [
     ]
   },
   {
-    numb: 3,
+    numb: 2,
     question: "A technique used to identify live systems in a network?",
     answer: "ICMP Ping sweep",
     options: [
@@ -35,6 +24,19 @@ let questions = [
       "tcp ping scan"
     ]
   },
+  {
+    numb: 3,
+    question: "Caesar Cipher uses C =(p+k) mod 26 to encrypt, where k=7. Use Caesar’s Cipher to decipher the following:AYVQHU OVYZL",
+    answer: "TROJAN HORSE",
+    options: [
+      "TROJAN HORSE",
+      "BRUTE FORCE",
+      "BRUTE HORSE",
+      "TROJAN FORCE"
+    ]
+  },
+   
+  
   {
     numb: 4,
     question: "Having individuals provide personal information to obtain a free offer provided through the Internet is considered what type of social engineering?",

@@ -1,1 +1,1 @@
-QuizySearch
+QuizzySearch
