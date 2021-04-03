@@ -18,7 +18,8 @@ function WordSearchController(gameId, listId, solveId, newGameId, instructionsId
 	//an object containing various themes/words for the game
 	var searchTypes = {
 
-		"Math! (please don't run away)": [["TROJANHORSE","Steganography"],
+		"Math! (please don't run away)": [["HelloWorld"],
+		["TROJANHORSE","Steganography"],
 		["ICMPPingsweep","ComputerBased"],
 		["NetworkMapper","DESALGORITHM"],
 		["Spyware","unconditionally"],
