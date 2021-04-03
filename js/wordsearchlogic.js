@@ -13,7 +13,7 @@ function WordSearchLogic(gameId,list) {
 	var board = {
 
 		matrix: [], //empty array where the matrix will go
-		size: 20 //width + height of the matrix
+		size: 18 //width + height of the matrix
 
 	};
 

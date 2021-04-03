@@ -30,7 +30,7 @@ function WordSearchController(gameId, listId, solveId, newGameId, instructionsId
 	var view;
 
 	//instructions to display in h2 header
-	var mainInstructions = "Search for the list of words inside the box and click-and-drag to select them!";
+	var mainInstructions = "Search for the Question's Answer inside the box and click-and-drag to select them!";
 
 	//function call to start the word search game
 	setUpWordSearch();

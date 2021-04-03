@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Quiz App | CodingNepal</title>
+    <title>Quizy-Search</title>
     <link rel="stylesheet" href="style.css">
     <!-- FontAweome CDN Link for Icons-->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -70,17 +70,21 @@
     <div class="split left">
 		<div class="centered">
        <!-- start Quiz button -->
-<div class="start_btn"><button>Start Quiz</button></div>
+<div class="start_btn"><button style="color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #091f68;">Start Quiz</button></div>
 
 <!-- Info Box -->
 <div class="info_box">
-    <div class="info-title"><span>Some Rules of this Quiz</span></div>
-    <div class="info-list">
-        <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
-        <div class="info">2. Once you select your answer, it can't be undone.</div>
-        <div class="info">3. You can't select any option once time goes off.</div>
-        <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-        <div class="info">5. You'll get points on the basis of your correct answers.</div>
+    <div class="info-title"><span>Some Rules of QuizySearch</span></div>
+    <div class="info-list" style="text-align: left;">
+        1. You will have only <span>60 seconds</span> to solve each Question <br>
+        2. Each Question consists of two sub questions<br>
+         === >   MCQ Quiz Question <br>
+            === >   Search for the Question's Answer inside the word box<br>
+        3. Once you select your answer, it can't be undone.<br>
+       4. You can't select any option once time goes off.<br>
+      5. You can't exit from the Quiz while you're playing.<br>
+        6. You'll get points on the basis of your correct answers.
     </div>
     <div class="buttons">
         <button class="quit">Exit Quiz</button>
@@ -91,7 +95,8 @@
     <!-- Quiz Box -->
     <div class="quiz_box">
         <header>
-            <div class="title">Awesome Quiz Application</div>
+            <div class="title" style="color: white;font-size: 30px;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #007bff;">Quizy-Search</div>
             <div class="timer">
                 <div class="time_left_txt">Time Left</div>
                 <div class="timer_sec">60</div>
@@ -150,9 +155,10 @@
     </div>  
     <div class="split right">
         <div class="centered">
-            <h2 id = "instructions"></h2>
+            <h2 id = "instructions" style="color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px rgb(139, 0, 46);"></h2>
             <!--<h3 id = "themeIntro">The theme is: <span id = "wordTheme"></span></h3>-->
-            <button id = "newGameButton" type = "button" style="text-align: center;">New Game</button>
+            <!--<button id = "newGameButton" type = "button" style="text-align: center;">New Game</button>-->
             <div id = "wordboard"></div>
 
             <!--<div id = "wordlist"></div>-->

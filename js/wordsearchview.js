@@ -1,7 +1,5 @@
 "use strict";
 
-const { count } = require("console");
-
 /** This object contains the necessary functions to create the 'view' of the word search,
  * which essentially refers to displaying the puzzle and handling mouse events!
  *
@@ -484,7 +482,7 @@ function WordSearchView(matrix, list, gameId, listId, instructionsId) {
 	 * @return true if the word made is a word in the list
 	 */
 	function validWordMade (list, wordToCheck, instructionsId) {
-		var count =0;
+
 		//loops through rows
 		for (var i = 0; i < list.length; i++) {
 
@@ -531,7 +529,7 @@ function WordSearchView(matrix, list, gameId, listId, instructionsId) {
 			if (selfSolved) {
 
 				//updates h2 text
-				//$(instructionsId).text("Trying well!");
+				$(instructionsId).text("Good Going! You are doing Great!! :~)");
 
 			}
 
